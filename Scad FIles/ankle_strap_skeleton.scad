@@ -6,26 +6,28 @@ translate([0,-50,0])buckle_connector();
 
 
 module strap() {
+    translate([10,-10,0])cube([75,20,3]);
+    translate([85,-10,0])rotate([0,0,45])cube([14,14,3]);
     difference() {
-    translate([-10,0,0])cylinder(r=23, $fn=360, h=3);
-        translate([-50,-25,0])cube([40,50,4]);
+    translate([-10,0,0])cylinder(r=23, $fn=360, h=4);
+        translate([-50,-25,0])cube([40,50,6]);
+        translate([-7,0,0])cylinder(d=5, h=4, $fn=360);
     }
-    translate([-9,-7.5,0])cube([3,15,6]);
-
-    translate([-20,12,0])cube([10,3,3]);
-    translate([-20,20,0])cube([10,3,3]);
-    translate([-20,-23,0])cube([10,3,3]);
-    translate([-20,-15,0])cube([10,3,3]);
-    translate([-20,4,0])cube([10,3,3]);
-    translate([-20,-6,0])cube([10,3,3]);
-    difference() {
+    translate([-9,5,0])cube([3,15,5]);
+    translate([-9,-20,0])cube([3,15,5]);
+    translate([-20,12.25,0])cube([10,2.5,2.5]);
+    translate([-20,20.25,0])cube([10,2.5,2.5]);
+    translate([-20,-23.25,0])cube([10,2.5,2.5]);
+    translate([-20,-15.25,0])cube([10,2.5,2.5]);
+    translate([-20,4.25,0])cube([10,2.5,2.5]);
+    translate([-20,-6.25,0])cube([10,2.5,2.5]);
+    translate([65,0,0])difference() {
     union() {
-translate([0,-6,0])cube([30,12,3]);
-translate([30, 0, 0])cylinder(h=3, d=12, $fn=360);
+translate([12,-3.5,0])cube([30,7,3]);
+translate([42, 0, 0])cylinder(h=3, d=7, $fn=360);
     }
     
-    translate([32, 0, 0])cylinder(d=5, h=3, $fn=360);
-    
+    translate([42, 0, 0])cylinder(d=5, h=3, $fn=360);
 }
 }
 

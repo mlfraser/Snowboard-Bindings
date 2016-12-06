@@ -1,17 +1,17 @@
 difference() {
 ankle_strap();
-translate([48,-27,25])rotate([90,0,-110])buckle_connector();
+translate([64,-27,25])rotate([90,0,-110])buckle_connector();
 
-translate([-55,5,25])rotate([90,0,90])strap();
+translate([-70,4,25])rotate([90,0,90])strap();
 }
 module ankle_strap() {
 difference() {
-cylinder(d=120, $fn=360, h=55);
+cylinder(d=150, $fn=360, h=55);
 
-cylinder(d=90, $fn=360, h=55);
+cylinder(d=120, $fn=360, h=55);
     
 translate([-100,0,-1])cube([200,100,60]);  
-  translate([0,0,50])cylinder(d2=120, d1=90, h=5, $fn=360);  
+  translate([0,0,45])cylinder(d2=150, d1=120, h=10, $fn=360);  
 }
 }
 
@@ -19,11 +19,13 @@ translate([-100,0,-1])cube([200,100,60]);
 
 module strap() {
     difference() {
-    translate([-10,0,0])cylinder(r=23, $fn=360, h=3);
-        translate([-50,-25,0])cube([40,50,4]);
+    translate([-10,0,0])cylinder(r=23, $fn=360, h=5);
+        translate([-50,-25,0])cube([40,50,6]);
+        
     }
-    translate([-9,-7.5,0])cube([3,15,6]);
-
+    translate([-7,0,-10])cylinder(d=5, h=25, $fn=360);
+    translate([-9,5,0])cube([3,15,6]);
+    translate([-9,-20,0])cube([3,15,6]);
     translate([-20,12,0])cube([10,3,3]);
     translate([-20,20,0])cube([10,3,3]);
     translate([-20,-23,0])cube([10,3,3]);
@@ -37,7 +39,6 @@ translate([30, 0, 0])cylinder(h=3, d=12, $fn=360);
     }
     
     translate([32, 0, 0])cylinder(d=5, h=3, $fn=360);
-    
 }
 }
 

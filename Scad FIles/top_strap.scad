@@ -13,17 +13,17 @@ hole();
 tip();
 }
  translate([0,175,0])rotate([75,0,0])cube([40,20,20]);
-cube([8,12,6]);
-translate([16,0,0])cube([8,12,6]);
-translate([-2.7,1.5,0])rotate([0,0,45])cube([15,15,10]);
-translate([26.6,1.5,0])rotate([0,0,45])cube([15,15,10]);
+cube([8,21,6]);
+translate([16,0,0])cube([8,21,6]);
+translate([-2.7,10.5,0])rotate([0,0,45])cube([15,15,10]);
+translate([26.6,10.5,0])rotate([0,0,45])cube([15,15,10]);
 strap_line();
 }
 
 
 module strap_line() {
     for(i= [0:24]) {
-        translate([0,i*6,0])indent();
+        translate([0,i*6+10,0])indent();
     }
 }
 module indent() {
